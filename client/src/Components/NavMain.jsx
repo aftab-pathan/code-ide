@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import Avatar from "react-avatar";
 import { MdLightMode } from "react-icons/md";
 import { BsGridFill } from "react-icons/bs";
-import { api_base_url, toggleClass } from "../helper";
+import { api_base_url, toggleClass } from "../utils";
 
 const NavMain = ({ isGridLayout, setIsGridLayout }) => {
   const navigate = useNavigate();

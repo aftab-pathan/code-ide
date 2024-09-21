@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import EditiorNavbar from "../components/EditiorNavbar";
 import Editor from "@monaco-editor/react";
 import { MdLightMode } from "react-icons/md";
 import { AiOutlineExpandAlt } from "react-icons/ai";
-import { api_base_url } from "../helper";
+import { api_base_url } from "../utils";
 import { useParams } from "react-router-dom";
+import NavEditor from "../Components/NavEditor";
 
 const EditorPage = () => {
   const [tab, setTab] = useState("html");
@@ -112,7 +112,7 @@ const EditorPage = () => {
 
   return (
     <>
-      <EditiorNavbar />
+      <NavEditor />
       <div className="flex">
         <div className={`left w-[${isExpanded ? "100%" : "50%"}]`}>
           <div className="tabs flex items-center justify-between gap-2 w-full bg-[#1A1919] h-[50px] px-[40px]">

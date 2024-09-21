@@ -12,7 +12,7 @@ const GridCard = ({ item }) => {
       <div className="gridCard bg-[#141414] w-[270px] p-[10px] h-[180px] cursor-pointer hover:bg-[#202020] rounded-lg shadow-lg shadow-black/50">
         <div
           onClick={() => {
-            navigate(`/editior/${item._id}`);
+            navigate(`/editor/${item._id}`);
           }}
         >
           <img className="w-[90px]" src={codeImg} alt="" />

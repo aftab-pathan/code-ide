@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
-import ListCard from "../components/ListCard";
-import GridCard from "../components/GridCard";
-import { api_base_url } from "../helper";
+import { api_base_url } from "../utils";
 import { useNavigate } from "react-router-dom";
+import NavMain from "../Components/NavMain";
+import ListCard from "../Components/ListCard";
+import GridCard from "../Components/GridCard";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -41,7 +41,7 @@ const Home = () => {
             setIsCreateModelShow(false);
             setProjTitle("");
             alert("Project Created Successfully");
-            navigate(`/editior/${data.projectId}`);
+            navigate(`/editor/${data.projectId}`);
           } else {
             alert("Something Went Wrong");
           }
@@ -102,7 +102,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar isGridLayout={isGridLayout} setIsGridLayout={setIsGridLayout} />
+      <NavMain isGridLayout={isGridLayout} setIsGridLayout={setIsGridLayout} />
       <div className="flex items-center justify-between px-[100px] my-[40px]">
         <h2 className="text-2xl">Hi, {userData ? userData.username : ""} 👋</h2>
         <div className="flex items-center gap-1">
